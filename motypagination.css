@@ -1,0 +1,39 @@
+.motypc_1604261319 {
+    font: 14px/1.5 "Microsoft Yahei", "Hiragino Sans GB", Helvetica, "Helvetica Neue", "微软雅黑", Tahoma, Arial, sans-serif;
+}
+.motypc_1604261319 a {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 0 5px;
+    min-width: 20px;
+    height: 29px;
+    line-height: 30px;
+    font-size: 14px;
+    color: #787d82;
+    text-align: center;
+    border-bottom: 1px solid transparent;
+    -webkit-transition: border-color 0.2s;
+    -moz-transition: border-color 0.2s;
+    transition: border-color 0.2s;
+    text-decoration: none;
+}
+.motypc_1604261319 a:hover {
+    border-color: #ec1500;
+    color: #ec1500;
+    text-decoration: none;
+}
+.motypc_1604261319 a.active_1604261319 {
+    background: #ec1500;
+    color: #ffffff;
+    border-color: transparent;
+}
+.motypc_1604261319 span {
+    display: inline-block;
+    padding: 0 5px;
+    min-width: 20px;
+    height: 39px;
+    line-height: 39px;
+    font-size: 14px;
+    color: #c8cdd2;
+    text-align: center;
+}

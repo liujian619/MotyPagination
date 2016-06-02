@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>MotyPagination Demo</title>
+		<link rel="stylesheet" type="text/css" href="motypagination.css">
+	</head>
+	<body>
+		<div id="motypage"></div>
+		<script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="motypagination-0.9.min.js"></script>
+		<script type="text/javascript">
+			$("#motypage").motypagination({
+				url: function(index){
+					return "javascript:alert('This is page {0}')".replace("{0}", index);
+				}
+			}, 5, 10);
+		</script>
+	</body>
+</html>
