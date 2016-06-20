@@ -111,14 +111,14 @@
 			if (isNaN(parseInt(total))) {
 				throw new Error("Initialization Argument('total') Error.");	
 			}
+			cur = parseInt(cur);
+			total = parseInt(total);
 			if (cur < 0 || total < 0) {
 				throw new Error("Initialization Argument Error('cur' or 'total' must be greater than 0).");	
 			}
 			if (cur > total) {
 				throw new Error("Initialization Argument Error('cur' must be less than 'total').");	
-			}
-			cur = parseInt(cur);
-			total = parseInt(total);
+			}		
 			if (total <= 1 && opts.hidewhenonlyone) {
 				$(_this).append("");
 			} else {
