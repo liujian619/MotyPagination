@@ -34,6 +34,11 @@ hidewhenonlyone:
 	boolean
 	默认值：true
 
+horizontal: 
+	横向还是竖向，如果是横向，那么将是一字排开，否则将会是一个select
+	boolean
+	默认值：true
+
 first: 
 	是否显示首页。
 	boolean

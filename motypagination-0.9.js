@@ -9,6 +9,7 @@
 			cur_color: "#fff",
 
 			hidewhenonlyone: true,
+			horizontal: true,
 			first: true,
 			last: true,
 			prev: true,
@@ -61,14 +62,27 @@
 				}
 			}
 
-			var pages = getShowPages(cur, total, opts.pages_shown)
-			for (var i = 0; i < pages.length; i++) {
-				if (cur === pages[i]) {
-					html += "<a href='javascript:void(0)' class='active_1604261319'>{0}</a>".replace("{0}", pages[i]);
-				} else {
-					html += "<a href='#' data-index='{0}'>{1}</a>".replace("{0}", pages[i]).replace("{1}", pages[i]);
+			if (opts.horizontal) {
+				var pages = getShowPages(cur, total, opts.pages_shown)
+				for (var i = 0; i < pages.length; i++) {
+					if (cur === pages[i]) {
+						html += "<a href='javascript:void(0)' class='active_1604261319'>{0}</a>".replace("{0}", pages[i]);
+					} else {
+						html += "<a href='#' data-index='{0}'>{1}</a>".replace("{0}", pages[i]).replace("{1}", pages[i]);
+					}
 				}
+			} else {
+				html += "<select>";
+				for (var i = 0; i < total; i++) {
+					if (cur === i + 1) {
+						html += "<option selected='selected' value='{0}'>{1}</option>".replace("{0}", i + 1).replace("{1}", i + 1);
+					} else {
+						html += "<option value='{0}'>{1}</option>".replace("{0}", i + 1).replace("{1}", i + 1);
+					}
+				}
+				html += "</select>";
 			}
+			
 
 			if (opts.next) {
 				if (cur === total) {
@@ -86,6 +100,13 @@
 			}
 
 			var obj = $("<div class='motypc_1604261319'>" + html + "</div>");
+			if (!opts.horizontal) {
+				var selects = obj.find("select");
+				$(selects).on("change", function() {
+					var index = $(this).val();
+					window.location = opts.url(index);
+				});
+			}
 			var aas = obj.find("a[href='#']");
 			for (var i = 0; i < aas.length; i++) {
 				var index = $(aas[i]).attr("data-index");

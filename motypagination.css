@@ -1,6 +1,23 @@
 .motypc_1604261319 {
     font: 14px/1.5 "Microsoft Yahei", "Hiragino Sans GB", Helvetica, "Helvetica Neue", "微软雅黑", Tahoma, Arial, sans-serif;
 }
+.motypc_1604261319 a,
+.motypc_1604261319 select {
+	outline: none;
+	-webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+.motypc_1604261319 select {
+	display: inline-block;
+	width: auto;
+	min-width: 50px;
+	height: 26px;
+    margin: 0 5px;
+    padding: 0 5px;
+	color: #787d82;
+	font-size: 14px;
+}
 .motypc_1604261319 a {
     display: inline-block;
     margin: 0 5px;
